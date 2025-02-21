@@ -4,7 +4,7 @@ body {
     padding: 0;
     color: #073613;
     text-align: center;
-    background: url("/photos/dalle") repeat-y;
+    background: url("/photos/DALL·E\ 2025-02-17\ 23.07.50\ -\ A\ perfectly\ seamless\,\ tileable\ light\ green\ background\ with\ a\ smooth\,\ subtle\ texture\ that\ complements\ forest\ green\ \(#228B22\).\ The\ edges\ must\ align\ flaw.webp") repeat-y;
     background-size: 100% auto; /* Ensures it stretches horizontally but repeats vertically */
     overflow-x: hidden;
     font-size: 20px;
