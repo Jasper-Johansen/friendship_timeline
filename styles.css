@@ -1,0 +1,234 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #073613;
+    text-align: center;
+    background: url("/photos/dalle") repeat-y;
+    background-size: 100% auto; /* Ensures it stretches horizontally but repeats vertically */
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+
+.timeline {
+    
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-item .content img.event-img {
+    max-width: 100%; /* Ensure image does not overflow its container */
+    height: auto;   /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+    margin: 10px auto;
+    border-radius:10px ;
+    padding:40 px; /* Add some vertical spacing */
+}
+
+.hero {
+    padding: 30px;
+    /*color: #188f71;*/
+    position: relative;
+    background: transparent;
+    border-radius: 50%;
+    width: 100%; /* Make hero full-width */
+    margin: 0; /* Remove margins */
+    border-radius: 20%;
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; 
+    backdrop-filter: blur(100px);
+}
+
+/*.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    z-index: 0;
+}*/
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1; /* Keep the heading above any overlays */
+    margin: 0; /* Remove default margins on h1 */
+}
+
+footer p{
+    color:#c07015;
+}
+
+footer{
+    background-color: white;
+    margin:60px;
+    border-radius:20px;
+    border-style: solid;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.0em; /* Smaller text for mobile */
+    }
+    .timeline-item {
+        width: 100%;
+        left: 5% !important;
+    }
+    /* Adjust image size for smaller screens */
+    .timeline-item .content img.event-img {
+        width: 100%; /* Image takes full width of content on small screens */
+    }
+}
+
+.timeline .central-line {
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, #7eac7f, #76e060);
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.central-line::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #7eac7f, #76e060);
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+  }
+  
+  .central-line::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #7eac7f, #76e060);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+  }
+
+.timeline-container {
+    padding: 20px 0;
+}
+
+.timeline-item {
+    width: 45%;
+    position: relative;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease-out;
+}
+
+.timeline-item .year {
+    background: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.timeline-item h3{
+    color: #4CAF50;
+    text-align: center;
+}
+
+.timeline-item.left {
+    left: 0;
+    position: relative;
+}
+
+.timeline-item.left .year {
+    right: -20px;
+}
+
+.timeline-item.right {
+    left: 54%;
+}
+
+.timeline-item.right .year {
+    left: -20px;
+}
+
+.timeline-item .content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    border:1px solid #228B22;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-item.left::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white;
+    right: -15px;
+    top: 20px;
+}
+
+.timeline-item.right::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+    left: -15px;
+    top: 20px;
+}
+
+.timeline-item {
+    transition: transform 0.3s ease-out;
+}
+.timeline-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+}
+@keyframes twinkle {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        width: 90%;
+        left: 5% !important;
+    }
+    .timeline-item.left .year, 
+    .timeline-item.right .year {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .timeline-item .year {
+        position: static; /* For smaller screens, place year above content */
+        margin-bottom: 10px;
+    }
+    .central-line {
+        left: 5%;
+    }
+}
