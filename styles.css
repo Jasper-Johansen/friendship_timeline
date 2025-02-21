@@ -4,7 +4,7 @@ body {
     padding: 0;
     color: #073613;
     text-align: center;
-    background: url("/photos/tile2.jpg") repeat-y;
+    background: url("photos/tile2.jpg") repeat-y;
     background-size: 100% auto; /* Ensures it stretches horizontally but repeats vertically */
     overflow-x: hidden;
     font-size: 20px;
