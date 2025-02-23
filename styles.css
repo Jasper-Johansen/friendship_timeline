@@ -62,17 +62,24 @@ body {
     margin: 0; /* Remove default margins on h1 */
 }
 
-footer p{
-    color:#c07015;
-}
-
-footer{
+footer {
+    color: hsl(0, 0%, 97%);
+    font-size:2rem;
     background-color: white;
+    font-weight: bold;
+    text-align: center;
     margin:60px;
     border-radius:20px;
     border-style: solid;
+    animation: glow 1s infinite alternate;
 }
-
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #e9635f; }
+    25% { text-shadow: 0 0 20px #f11b0c; }
+    0% { text-shadow: 0 0 5px #e9635f; }
+    25% { text-shadow: 0 0 20px #f11b0c; }
+  }
+  
 /* Media queries for responsiveness */
 @media screen and (max-width: 500px) {
     .hero h1 {
