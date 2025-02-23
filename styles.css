@@ -64,21 +64,29 @@ body {
 
 footer {
     color: hsl(0, 0%, 97%);
-    font-size:2rem;
+    font-size: 2rem;
     background-color: white;
     font-weight: bold;
     text-align: center;
-    margin:60px;
-    border-radius:20px;
+    margin: 60px;
+    border-radius: 20px;
     border-style: solid;
+    padding: 10px;  /* Add padding to ensure content has space */
+    height: 150px;   /* Set a fixed height */
+    overflow: hidden; /* Prevents any content from pushing it */
+}
+
+footer p {
+    display: inline-block; /* Prevents the footer from expanding */
     animation: blink 1s infinite alternate;
 }
+
 @keyframes blink {
-    0% { font-size: 1.5rem; opacity: 1; }
-    50% { font-size: 1.6rem; opacity: 0.5; }
-    100% { font-size: 1.5rem; opacity: 1; }
-  }
-  
+    0% { font-size: 1.5rem; opacity: 0.5; }
+    50% { font-size: 1.6rem; opacity: 1; }
+    100% { font-size: 1.5rem; opacity: 0.5; }
+}
+
 /* Media queries for responsiveness */
 @media screen and (max-width: 500px) {
     .hero h1 {
@@ -212,11 +220,6 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.1);
-}
-@keyframes twinkle {
-    0% { opacity: 0.6; }
-    50% { opacity: 1; }
-    100% { opacity: 0.6; }
 }
 
 @media screen and (max-width: 768px) {
