@@ -64,7 +64,7 @@ body {
 
 footer {
     color: hsl(0, 0%, 97%);
-    font-size: 2rem;
+    font-size: 1.7rem;
     background-color: white;
     font-weight: bold;
     text-align: center;
@@ -72,20 +72,20 @@ footer {
     border-radius: 20px;
     border-style: solid;
     padding: 10px;  /* Add padding to ensure content has space */
-    height: 150px;   /* Set a fixed height */
+    height: 200px;   /* Set a fixed height */
     overflow: hidden; /* Prevents any content from pushing it */
 }
 
-footer p {
-    display: inline-block; /* Prevents the footer from expanding */
+/*footer p {
+    display: inline-block; 
     animation: blink 1s infinite alternate;
-}
+}*/
 
-@keyframes blink {
+/*@keyframes blink {
     0% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.05); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
     100% { transform: scale(1); opacity: 0.5; }
-}
+}*/
 
 
 /* Media queries for responsiveness */
