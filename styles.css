@@ -74,9 +74,9 @@ footer{
 }
 
 /* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .hero h1 {
-        font-size: 2.0em; /* Smaller text for mobile */
+        font-size: 1.8em; /* Smaller text for mobile */
     }
     .timeline-item {
         width: 100%;
