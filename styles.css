@@ -28,7 +28,7 @@ body {
     padding:40 px; /* Add some vertical spacing */
 }
 
-.hero {
+.hero, footer{
     height: 150px;
     padding: 10px;
     color: #188f71;
@@ -45,6 +45,20 @@ body {
     backdrop-filter: blur(100px);
     overflow-x: hidden;
 }
+
+/*footer {
+    color: hsl(0, 0%, 97%);
+    font-size: 1.2rem;
+    background-color: white;
+    font-weight: lighter;
+    text-align: center;
+    margin: 60px;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 10px;
+    height: 150px;  
+    overflow: hidden; 
+}*/
 
 /*.hero::before {
     content: "";
@@ -63,20 +77,6 @@ body {
     font-family: 'Poppins', sans-serif;
     z-index: 1; /* Keep the heading above any overlays */
     margin: 0; /* Remove default margins on h1 */
-}
-
-footer {
-    color: hsl(0, 0%, 97%);
-    font-size: 1.2rem;
-    background-color: white;
-    font-weight: lighter;
-    text-align: center;
-    margin: 60px;
-    border-radius: 20px;
-    border-style: solid;
-    padding: 10px;  /* Add padding to ensure content has space */
-    height: 20%;   /* Set a fixed height */
-    overflow: hidden; /* Prevents any content from pushing it */
 }
 
 /*footer p {
