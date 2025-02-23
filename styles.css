@@ -32,14 +32,14 @@ body {
     /*color: #188f71;*/
     position: relative;
     background: transparent;
-    width: 100%; /* Make hero full-width */
+    max-width: 100%; /* Make hero full-width */
     margin: 0; /* Remove margins */
     display: flex; /* Use flexbox for vertical centering */
     flex-direction: column; /* Stack content vertically */
     justify-content: center; /* Vertically center content */
     align-items: center; 
     backdrop-filter: blur(100px);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /*.hero::before {
