@@ -29,10 +29,13 @@ body {
 }
 
 .hero {
-    padding: 30px;
-    /*color: #188f71;*/
+    height: 150px;
+    padding: 10px;
+    color: #188f71;
     position: relative;
     background: transparent;
+    background-color: white;
+    border-radius: 10% / 50%;
     max-width: 100%; /* Make hero full-width */
     margin: 0; /* Remove margins */
     display: flex; /* Use flexbox for vertical centering */
@@ -64,15 +67,15 @@ body {
 
 footer {
     color: hsl(0, 0%, 97%);
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     background-color: white;
-    font-weight: bold;
+    font-weight: lighter;
     text-align: center;
     margin: 60px;
     border-radius: 20px;
     border-style: solid;
     padding: 10px;  /* Add padding to ensure content has space */
-    height: 200px;   /* Set a fixed height */
+    height: 20%;   /* Set a fixed height */
     overflow: hidden; /* Prevents any content from pushing it */
 }
 
